@@ -2,7 +2,6 @@
 
 [Atlantis](https://www.runatlantis.io/) is tool which provides unified workflow for collaborating on Terraform through GitHub, GitLab and Bitbucket Cloud.
 
-[![SWUbanner](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/banner2-direct.svg)](https://github.com/vshymanskyy/StandWithUkraine/blob/main/docs/README.md)
 
 This repository contains Terraform infrastructure code which creates AWS resources required to run [Atlantis](https://www.runatlantis.io/) on AWS, including:
 
@@ -36,7 +35,7 @@ There are three ways to do this:
 1. Clone this github repository:
 
 ```
-$ git clone git@github.com:terraform-aws-modules/terraform-aws-atlantis.git
+$ git clone https://github.com/opensource-terraform-modules/terraform-aws-atlantis
 $ cd terraform-aws-atlantis
 ```
 
@@ -56,9 +55,7 @@ This way allows integration with your existing Terraform configurations.
 
 ```hcl
 module "atlantis" {
-  source  = "terraform-aws-modules/atlantis/aws"
-  version = "~> 3.0"
-
+  source  = "github.com/opensource-terraform-modules/terraform-aws-atlantis"
   name = "atlantis"
 
   # VPC
@@ -98,7 +95,7 @@ repos:
 `main.tf`
 ```hcl
 module "atlantis" {
-  source  = "terraform-aws-modules/atlantis/aws"
+  source  = "github.com/opensource-terraform-modules/terraform-aws-atlantis"
 
   # ...
 
@@ -434,9 +431,3 @@ Module is maintained by [Anton Babenko](https://github.com/antonbabenko) with he
 ## License
 
 Apache 2 Licensed. See [LICENSE](https://github.com/terraform-aws-modules/terraform-aws-atlantis/tree/master/LICENSE) for full details.
-
-## Additional information for users from Russia and Belarus
-
-* Russia has [illegally annexed Crimea in 2014](https://en.wikipedia.org/wiki/Annexation_of_Crimea_by_the_Russian_Federation) and [brought the war in Donbas](https://en.wikipedia.org/wiki/War_in_Donbas) followed by [full-scale invasion of Ukraine in 2022](https://en.wikipedia.org/wiki/2022_Russian_invasion_of_Ukraine).
-* Russia has brought sorrow and devastations to millions of Ukrainians, killed hundreds of innocent people, damaged thousands of buildings, and forced several million people to flee.
-* [Putin khuylo!](https://en.wikipedia.org/wiki/Putin_khuylo!)
